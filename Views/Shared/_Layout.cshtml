@@ -1,0 +1,87 @@
+﻿@using Newtonsoft.Json;
+
+@{
+    if (Context.Session.GetString("login") != null)
+    {
+        var resultadoSessao = Context.Session.GetString("login");
+        var login = JsonConvert.DeserializeObject<Login>(resultadoSessao);
+        var id = login.Id;
+        var usuario = login.Usuario;
+        var tipo = login.TipoUsuario;
+        //... chamar todas as variáveis do LoginResultado no método getTipo do repositório LoginDao.
+
+        ViewData["Id"] = id;
+        ViewData["Usuario"] = usuario;
+        ViewData["Tipo"] = tipo;
+        // ... adicionar mais variáveis do tipo ViewData, se houver mais variáveis acima.
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/css/reset.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
+    <link rel="stylesheet" href="~/css/cadastroCao.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/telaCruza.css" asp-append-version="true" /> 
+<link rel="stylesheet" href="~/css/cachorro.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/detalhes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/edit.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/delete.css" asp-append-version="true" />
+
+</head>
+<body>
+    <header>
+        <div class="left-header">
+            <a asp-controller="Home" asp-action="Index">
+            <img src="~/imgs/logoprojeto.png" alt="logo">
+            </a>
+        </div>
+        <nav class="navheader">
+            <ul>
+               
+                <li class="sobre"><a asp-controller="Home" asp-action="About" >Sobre</a></li>
+                <li class="equipe"><a asp-controller="Home" asp-action="Time">Equipe</a></li>
+                <li class="cachorro"><a asp-controller="Cachorro" asp-action="Index">Cachorros</a></li>
+                <div class="user-info">
+                @{
+                    if (ViewData["Usuario"]?.ToString() != null)
+                    {
+                        <a class="sair-button" asp-controller="Login" asp-action="Logout">Sair&nbsp;<span class="fa fa-close"></span></a>
+                        <br />
+                        <span class="usuario">Olá @ViewData["Usuario"], seja Bem Vindo!</span>
+                    }
+                    else
+                    {
+                        <a class="entrar-button" asp-controller="Login" asp-action="Login">Entrar&nbsp;<span class="fa fa-folder-open-o"></span></a>
+                    }
+                
+                }
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="rodape">
+        <div>
+            <h2>© Copyright Conexão Canina</h2>
+            <h2>Desenvolvido por Grupo PETS</h2>
+        </div>
+        <div>
+            <h2>Telefone: (16) 99999-9999</h2>
+            <h2>e-Mail: conexaocanina@gmail.com</h2>
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿@model WebApplication1.Models.Cachorros
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<dl class="row photos">
+
+    <h2 id="login-settings">Descrição</h2>
+ <div class="details-container">
+    <div class="detail">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ano_nascimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ano_nascimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pedigree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pedigree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.porte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.porte)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.raca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.raca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.descrição)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.descrição)
+        </dd>
+    </div>
+
+       
+
+       <div class="photos-container">
+        <dd class="col-sm-10">
+            <img src="~/imgs/@Html.DisplayFor(model => model.foto)" />
+        </dd>
+        <dd class="col-sm-10">
+            <img src="~/imgs/@Html.DisplayFor(model => model.foto1)" />
+        </dd>
+        <dd class="col-sm-10">
+            <img src="~/imgs/@Html.DisplayFor(model => model.foto2)" />
+        </dd>
+        <dd class="col-sm-10">
+            <img src="~/imgs/@Html.DisplayFor(model => model.foto3)" />
+        </dd>
+        </div>
+
+
+
+
+ </div>
+       
+</dl>
+
+

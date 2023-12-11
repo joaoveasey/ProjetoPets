@@ -1,0 +1,468 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #ececff;
+}
+
+
+header {
+    background-color: #152540;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 50px;
+}
+
+
+.entrar-button {
+    border: none;
+    background-color: #3d61ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+}
+
+    .entrar-button:hover {
+        background-color: #2c4d85;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .entrar-button a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+    }
+
+.sair-button {
+    border: none;
+    background-color: #3d61ff;
+    padding: 5px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+    .sair-button:hover {
+        background-color: #2c4d85;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .sair-button a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+    }
+
+.user-info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+
+.left-header img {
+    width: 180px;
+    height: 80px;
+    margin-top: 3px;
+}
+
+.navheader ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+    .navheader ul li {
+        padding-right: 50px;
+    }
+
+        .navheader ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+            .navheader ul li a:hover {
+                text-decoration: underline;
+            }
+
+        .navheader ul li.sobre,
+        .navheader ul li.time,
+        .navheader ul li.cachorros {
+            margin-left: auto;
+            margin-right: 15px;
+        }
+
+
+.main-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-left: 80px;
+    padding-bottom: 30px;
+}
+
+.left-main img {
+    width: 800px;
+    height: 520px;
+    box-shadow: inset 0 0 1em, 0 0 1em #152540;
+}
+
+.main-right {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.div-right {
+    font-size: 47px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+    color: #152540;
+}
+
+.nav-verCachorros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cachorros-info {
+    text-align: center;
+    color: #152540;
+}
+
+    .cachorros-info a {
+        margin-top: 120px; /* Ajuste conforme necessário */
+        padding: 40px 100px;
+        font-size: 25px;
+    }
+
+.botao-cachorro {
+    background-color: #3d61ff;
+    /* cor de fundo do botão */
+    border: none;
+    /* remova a borda do botão */
+    color: white;
+    /* cor do texto do botão */
+    padding: 12px 20px;
+    /* adicione algum espaço dentro do botão */
+    text-align: center;
+    /* centralize o texto do botão */
+    text-decoration: none;
+    /* remova o sublinhado do texto do botão */
+    display: inline-block;
+    /* faça o botão ficar em linha */
+    font-size: 18px;
+    /* tamanho do texto do botão */
+    margin: 4px 2px;
+    /* adicione alguma margem ao redor do botão */
+    cursor: pointer;
+    /* mude o cursor do mouse ao passar sobre o botão */
+    border-radius: 8px;
+    /* adicione um raio de borda arredondada */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* adicione uma sombra */
+    transition: all 0.3s ease;
+    /* adicione uma transição suave */
+    margin-top: 10px;
+}
+
+    .botao-cachorro:hover {
+        background-color: #2c4d85;
+        /* mude a cor de fundo quando passar o mouse */
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        /* adicione uma sombra maior */
+        text-decoration: none;
+        transform: rotate(2deg);
+    }
+
+
+.nav-home {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.nav-home {
+    text-decoration: none
+}
+
+#h2cadastro {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+.botao-main {
+    background-color: #3d61ff;
+    /* cor de fundo do botão */
+    border: none;
+    /* remova a borda do botão */
+    color: white;
+    /* cor do texto do botão */
+    padding: 12px 20px;
+    /* adicione algum espaço dentro do botão */
+    text-align: center;
+    /* centralize o texto do botão */
+    text-decoration: none;
+    /* remova o sublinhado do texto do botão */
+    display: inline-block;
+    /* faça o botão ficar em linha */
+    font-size: 18px;
+    /* tamanho do texto do botão */
+    margin: 4px 2px;
+    /* adicione alguma margem ao redor do botão */
+    cursor: pointer;
+    /* mude o cursor do mouse ao passar sobre o botão */
+    border-radius: 8px;
+    /* adicione um raio de borda arredondada */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* adicione uma sombra */
+    transition: all 0.3s ease;
+    /* adicione uma transição suave */
+    margin-top: 10px;
+}
+
+    .botao-main:hover {
+        background-color: #2c4d85;
+        /* mude a cor de fundo quando passar o mouse */
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        /* adicione uma sombra maior */
+        text-decoration: none;
+    }
+
+#sobre-div {
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    text-align: center;
+}
+
+    #sobre-div h3 {
+        font-size: 26px;
+        text-decoration: underline;
+        color: #152540;
+        margin-bottom: 15px;
+    }
+
+    #sobre-div p {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+.rodape {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #152540;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0%;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+    footer h2 {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+
+
+.main-equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.member {
+    width: 300px;
+    margin: 20px;
+    padding: 27.5px;
+    text-align: center;
+    background-color: #f3f0ff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+    .member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .member h2 {
+        margin: 0;
+        color: #2c4d85;
+    }
+
+    .member p {
+        margin: 10px 0;
+        color: #2c4d85;
+    }
+
+#team {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #152540;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    border-top: 1px solid #152540;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#tit-sobre {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #152540;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    border-top: 1px solid #152540;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+@media screen and (max-width: 375px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .left-header img {
+        width: 100px;
+        height: 70px;
+        margin-left: 10px;
+    }
+
+    .meu-botao {
+        padding: 10px;
+        width: 55px;
+    }
+
+        .meu-botao:hover {
+            background-color: #2c4d85;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+    nav.navheader {
+        width: 100%;
+    }
+
+    header nav ul {
+        padding-left: 50px;
+    }
+
+        header nav ul li {
+            padding: 5px;
+            padding-right: 15px;
+        }
+
+            header nav ul li a {
+                font-size: 14px;
+            }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        margin-top: 50px;
+        width: auto;
+    }
+
+    .member {
+        width: auto;
+    }
+
+    .left-main img {
+        width: 350px;
+        height: 190px;
+        margin-bottom: 30px;
+    }
+
+    .texto-right-main h2 {
+        font-size: 20px;
+    }
+
+    .form .meu-botao {
+        font-size: 14px;
+    }
+
+    form input,
+    form label {
+        font-size: 14px;
+    }
+
+    #sobre-div {
+        align-items: flex-start;
+    }
+
+        #sobre-div h3 {
+            font-size: 19px;
+        }
+
+        #sobre-div p {
+            font-size: 16px;
+        }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: auto;
+    }
+
+        footer h2 {
+            font-size: 12px;
+        }
+}

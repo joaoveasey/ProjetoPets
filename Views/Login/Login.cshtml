@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.Login
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action = "Login">
+            <h2 id="login-settings">Login</h2>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-usuario">
+                <label asp-for="Usuario" class="control-label"></label>
+                <input asp-for="Usuario" class="form-control" />
+                <span asp-validation-for="Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-senha">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" type="password" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Entrar" class="btn btn-primary custom-btn" />
+            </div>
+            @{
+                if (ViewBag.Error != null)
+                {
+                    <div>@ViewBag.Error</div>
+                }
+            }
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

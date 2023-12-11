@@ -1,0 +1,28 @@
+﻿/* Estilo para o contêiner do cartão */
+.cachorro-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    /* Estilo para as imagens no cartão */
+    .cachorro-card img {
+        width: 200px;
+        height: 200px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Estilo para o título no cartão */
+    .cachorro-card h2 {
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+
+    /* Estilo para o texto no cartão */
+    .cachorro-card p {
+        font-size: 1rem;
+        margin: 10px;
+        color: #555;
+    }

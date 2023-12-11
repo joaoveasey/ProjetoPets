@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication1.Models.Cachorros>
+@using Newtonsoft.Json;
+@{
+    if (Context.Session.GetString("login") != null)
+    {
+        var resultadoSessao = Context.Session.GetString("login");
+        var login = JsonConvert.DeserializeObject<Login>(resultadoSessao);
+        var id = login.Id;
+        var usuario = login.Usuario;
+        var tipo = login.TipoUsuario;
+        //... chamar todas as variáveis do LoginResultado no método getTipo do repositório LoginDao.
+
+        ViewData["Id"] = id;
+        ViewData["Usuario"] = usuario;
+        ViewData["Tipo"] = tipo;
+        // ... adicionar mais variáveis do tipo ViewData, se houver mais variáveis acima.
+    }
+}
+@if (ViewData["Usuario"]?.ToString() != null)
+{
+    <div class="create-button-container">
+        <a class="create-button" asp-action="Create" asp-controller="Cachorro">Cadastrar novo cão</a>
+    </div>
+}
+
+
+
+<div class="cachorro-container">
+    <div class="cachorro-list">
+        @foreach (var item in Model)
+        {
+            <a asp-controller="Cachorro" asp-route-id="@item.id" asp-action="Details">
+                <div class="cachorro-list-card">
+                    <img src="~/imgs/@item.foto" alt="Cachorro 1">
+                    <h2>@Html.DisplayFor(modelItem => item.nome)</h2>
+                    
+
+                    @if (ViewData["Usuario"]?.ToString() != null)
+                    {
+                        <div class="button-container">
+                            <a class="edit-button" asp-action="Edit" asp-controller="Cachorro" asp-route-id="@item.id">Editar</a>
+                            <a class="delete-button" asp-action="Delete" asp-controller="Cachorro" asp-route-id="@item.id">Deletar</a>
+                        </div>
+                    }
+                </div>
+            </a>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@model WebApplication1.Models.Cachorros
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <h2 id="login-settings">Edite seu Pet</h2>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="genero" class="control-label"></label>
+                <input asp-for="genero" class="form-control" />
+                <span asp-validation-for="genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ano_nascimento" class="control-label"></label>
+                <input asp-for="ano_nascimento" class="form-control" />
+                <span asp-validation-for="ano_nascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pedigree" class="control-label"></label>
+                <input asp-for="pedigree" class="form-control" />
+                <span asp-validation-for="pedigree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cor" class="control-label"></label>
+                <input asp-for="cor" class="form-control" />
+                <span asp-validation-for="cor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="porte" class="control-label"></label>
+                <input asp-for="porte" class="form-control" />
+                <span asp-validation-for="porte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descrição" class="control-label"></label>
+                <input asp-for="descrição" class="form-control" />
+                <span asp-validation-for="descrição" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="foto" class="control-label"></label>
+                <input type="file" asp-for="foto" class="form-control" />
+                <span asp-validation-for="foto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="foto1" class="control-label"></label>
+                <input type="file" asp-for="foto1" class="form-control" />
+                <span asp-validation-for="foto1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="foto2" class="control-label"></label>
+                <input type="file" asp-for="foto2" class="form-control" />
+                <span asp-validation-for="foto2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="foto3" class="control-label"></label>
+                <input type="file" asp-for="foto3" class="form-control" />
+                <span asp-validation-for="foto3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="raca" class="control-label"></label>
+                <input asp-for="raca" class="form-control" />
+                <span asp-validation-for="raca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary custom-btn" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
